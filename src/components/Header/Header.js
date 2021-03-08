@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Header = () => {
+const Header = (props) => {
+    const [count, setCount] = useState(0);
     return (
         <div>
-            <h1>This is header</h1>
+            <h1>This is header: {count}</h1>
+            <button onClick={() => setCount(count + 1) }>Increment</button>
         </div>
     );
 };
