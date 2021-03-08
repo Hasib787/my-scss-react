@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CategoryContext } from '../../App';
 
-const CategoryDetails = (props) => {
-    const {count} = props;
+const CategoryDetails = () => {
+    const category = useContext(CategoryContext);
     return (
         <div>
-            <p>This is your Category Details has: {count}</p>
+            <h4>This is your Category Details has</h4>
+            <h5>Selected Category: {category}</h5>
         </div>
     );
 };
