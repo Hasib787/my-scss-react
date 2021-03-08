@@ -8,14 +8,13 @@ export const CategoryContext = createContext();
 
 function App() {
 
-  const [category, setCategory] = useState(0);
+  const [category, setCategory] = useState('laptop');
 
   return (
     <CategoryContext.Provider value = {[category, setCategory]}>
       <Header></Header>
       <Home></Home>
       <Shipment></Shipment>
-
     </CategoryContext.Provider>
   );
 }
